@@ -1,7 +1,7 @@
 import PIL.Image
 import streamlit as st
 import google.generativeai as genai
-import pyperclip
+
 
 st.title("Image to text generator")
 st.divider()
