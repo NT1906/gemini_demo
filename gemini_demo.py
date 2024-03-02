@@ -1,7 +1,7 @@
 import PIL.Image
 import streamlit as st
 import google.generativeai as genai
-
+from config import GOOGLE_API_KEY
 
 st.title("Image to text generator")
 st.divider()
@@ -15,7 +15,6 @@ if uploaded_file is not None:
     img = PIL.Image.open(uploaded_file)
     st.image(uploaded_file)
     # Setup your API key
-    GOOGLE_API_KEY = 'AIzaSyD7kzLfv9uOyk2yojcso0Lk7ofbmd8p3oI'  # Replace with your actual Google API key
     genai.configure(api_key=GOOGLE_API_KEY)
 
     # Use the gemini-pro model for text generation
